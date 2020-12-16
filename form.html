@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoc HTML</title>
+</head>
+
+<body>
+    <!-- the form -->
+    <!-- Thuoc tinh action Duong dan ma form se gui du lieu toi 
+         method Phuong thuc gui du lieu POST/GET-->
+        <h2>Form mẫu</h2>
+        
+        <form action="/action_page.php">
+            First name: <input type="text" name="FirstName"><br>
+            Last name:  <input type="text" name="LastName"><br>
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+    </form>
+    <!-- The label -->
+    <!-- The label Tao nhan cho cac the input -->
+        <h2>The label</h2>
+        <form action="/action_page.php">
+            <label>Name:</label>
+            <input type="text" name="name"> <br />
+            <label>Email:</label>
+            <input type="text" name="mail"> <br />
+        </form>
+    <!-- Thuoc tinh for cua the label -->
+    <!-- Thuộc tính for của thẻ label phải bằng với id của thẻ input mà nó đại diện -->
+        <h2>Thuoc tinh for cua the label</h2>
+        <form action="/action_page.php">
+            <label for="name">Name:</label>
+            <input type="text" name="name"> <br />
+            <label for="email">Email:</label>
+            <input type="text" name="email"> <br />
+        </form>
+    <!-- The fieldset -->
+    <!-- Thẻ fieldset sẽ tạo một khung bao quanh những phần tử nằm trong nó -->
+    <!-- Thuoc tinh cua the fieldset
+         name Ten cua vung fieldset
+         disabeld Vo hieu hoa cac phan tu nam ben trong fieldset -->
+        <h2>The fieldset</h2>
+        <form>
+            <fieldset>
+                <legend>Thông tin</legend><br />
+                Name:<input type="text" name="name"><br />
+                Email:<input type="text" name="email"><br />
+            </fieldset>
+        <!-- disabeld Vo hieu hoa cac phan tu nam ben trong fieldset -->
+            <fieldset disabled="disabled">
+                <legend>Thông tin cố định</legend><br />
+                <label for="time">TimeStamp</label>
+                <input type="text" name="time" value="0:0"><br />
+                <label for="country">Country</label>
+                <input type="text" name="country" value="Viet Nam"><br />
+            </fieldset>
+        </form>
+        <br>
+    <!-- The optgroup -->
+    <!-- Thẻ optgroup có chức năng nhóm các tùy chọn(option) có liên quan trong danh sách tùy chọn. -->
+    <!-- lable Dinh ro label cho nhom optgroup -->
+        <h2>The optgroup</h2>
+        <select>
+            <optgroup label="PHP Framework">
+                <option>Laravel</option>
+                <option>Zend 2</option>
+            </optgroup>
+            <optgroup label="js Framework" disabled="disabled">
+               <option>Jquery</option>
+               <option>Nodejs</option>
+            </optgroup>
+        </select>
+        <br>
+    <!-- The option -->
+    <!-- Thẻ option sẽ tạo ra một tùy chọn trong danh sách các tùy chọn của thẻ select. -->
+        <h2>The option</h2>
+        <form>
+        <select>
+            <option>PHP</option>
+            <option>Javascript</option>
+            <option>HTML-CSS</option>
+            <option>Database</option>
+            <option>Lập trình mobile</option>
+        </select>
+        </form>
+    <!-- Mỗi khóa học nằm trong một cặp thẻ <option>, khi chọn option nào thì giá trị của option đó sẽ là giá trị của <select> -->
+    <!-- label Dat mot label ngan gon cho option
+         selected Neu option nao thuoc tinh nay, no se la gia tri mac dinh duoc chon sau khi tai trang
+         value Gia tri cua option, cung la gia tri cua select neu option do duoc chon -->
+    <!-- sử dụng thuộc tính value và selected của thẻ option. khi submit sẽ alert ra giá trị của select -->
+        <form>
+            <select id="select">
+                <option value="php">PHP</option>
+                <option value="js" selected="selected">Javascript</option>
+                <option value="html/css" >HTML-CSS</option>
+                <option value="db">Database</option>
+                <option value="mobile">Lập trình mobile</option>
+            </select>
+            <input type="submit" name="Submit" onclick='alert(document.getElementById("select").value)'>
+        </form>
+    <!-- The button -->
+    <!-- Thẻ button sẽ tạo ra một nút bấm. -->
+    <!-- Trong cặp thẻ <button></button> người dùng có thể đặt nội dung là một đoạn văn bản hoặc một hình ảnh. Đây là điểm khác nhau giữa thẻ button và thẻ input có type = button. -->
+        <h2>The button</h2>
+            <button type="button" onclick="alert('Hello Freetuts.net!')" >
+                Click để in ra lời chào freetuts
+            </button> 
+    <!-- Thuoc tinh cua the button 
+         type Se quy dinh kieu nut, bao gom Summit/ reset/ button-->
+            <form>
+                <input type="text" name="username"><br>
+                <input type="text" name="email"><br>
+                <button type="reset">Reset</button>
+            </form>
+    <!-- The textarea -->
+    <!-- Thẻ textarea sẽ tạo một vùng nhập liệu bao gồm nhiều dòng.
+         Vùng dữ liêu sẽ có số kí tự không hạn chế. Các kí tự sẽ được biểu diễn băng font chữ nhất định( thường là Courier) -->
+        <h2>The textarea</h2>
+            <form >
+                <textarea rows="4" cols="50">
+                PHP (viết tắt hồi quy "PHP: Hypertext Preprocessor") là một ngôn ngữ 
+                 lập trình kịch bản hay một loại mã lệnh chủ yếu được dùng để phát 
+                 triển các ứng dụng viết cho máy chủ, mã nguồn mở, dùng cho mục 
+                 đích tổng quát. Nó rất thích hợp với web và có thể dễ dàng nhúng vào trang HTML.
+                 </textarea>
+            </form>
+    <!-- The input -->
+    <!-- Thẻ input có chức năng tạo một trường để người dùng có thể nhập dữ liệu đầu vào.
+         Thẻ input được sử dụng cùng với thẻ form để khai báo điều khiển đầu vào cho phép người dùng nhập dữ liệu.
+         Một trường input có thể thay đổi theo nhiều cách, phụ thuộc vào thuộc tính truyền vào. -->
+    <!-- Thuoc tinh cua the input
+         text: Trường văn bản
+         password: Trường mặt khẩu, các ký tự nhập sẽ bị che bằng ký tự *
+         checkbox: Ô checkbox
+         submit: Nút nhấn để submit nộp
+    -->
+    <!-- Thuoc tinh value:  nó quy định giá trị của thẻ input -->
+        <form>
+        <h2> The input </h2>
+        Username: <input type="text" name="username" value="Nhập username" >  <br />
+        Password: <input type="passwword" name="passwword" value="Nhập password"> <br />
+                  <input type="submit" name="submit" value="Đăng Nhập">
+        </form> <br>
+        <form action="/action_page.php">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <!-- checkbox -->
+        <form action="/action_page.php">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    <!-- The select -->
+        <h2>The select</h2>
+    <form>
+        <select id="author_id" name="author_name">
+            <option value="cuong">Nguyễn Văn Cường</option>
+            <option value="minh">Hoài Minh</option>
+            <option value="chipheo">Chí Phèo</option>
+        </select>
+        <input type="submit" name="Submit" onclick='alert(document.getElementById("author_id").value)'>
+    </form> <br>
+    <!-- Thuoc tinh multiple -->
+    <form>
+        <select id="author_id1" name="author_name" multiple>
+            <option value="cuong">Nguyễn Văn Cường</option>
+            <option value="minh">Hoài Minh</option>
+            <option value="chipheo">Chí Phèo</option>
+        </select>
+        <input type="submit" name="Submit" onclick='alert(document.getElementById("author_id1").value)'>
+    </form>
+</body>
+
+</html>
+<!-- 
+    HTML Form Tags
+    The form Tao mot mau cho nguoi dung cho chuc nang dang nhap
+    The form chua cac phan tu
+    <input> Name = Giá trị Value
+    <textarea>
+    <button>
+    <select> Name = Giá trị Value
+    <optgroup>
+    <fieldset>
+    <label> 
+    <option>
+-->
